@@ -1,0 +1,22 @@
+{
+    "version": "0.2",
+    "ignorePaths": [],
+    "dictionaryDefinitions": [
+        {
+            "name": "spanish",
+            "path": "dictionaries/spanish.txt"
+        },
+        {
+            "name": "english",
+            "path": "dictionaries/english.txt"
+        }
+    ],
+    "dictionaries": [
+        "spanish",
+        "english"
+    ],
+    "words": [],
+    "ignoreWords": [],
+    "import": [],
+    "language": "en"
+}

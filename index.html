@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CRISTIANB DEV</title>
+    <!-- Fuentes de Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&family=Source+Code+Pro&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome -->
+    <script
+      src="https://kit.fontawesome.com/66ae538cdd.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="css\styles.css" />
+  </head>
+  <body>
+    <!-- Barra de Navegación -->
+    <nav>
+      <!-- Contenido Barra de Navegación -->
+      <div class="nav-container">
+        <img src="images/logo-rectangular.png" alt="Logo CristianB Dev" id="logo" />
+        <ul class="nav-links">
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#lenguajes">Lenguajes</a></li>
+          <li><a href="#habilidades">Habilidades</a></li>
+          <li><a href="#proyectos">Proyectos</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Header con Video de Fondo -->
+    <header id="inicio">
+      <!-- Contenido Header -->
+      <video autoplay muted loop id="video-fondo">
+        <source src="media\video\video-background.mp4" type="video/mp4" />
+      </video>
+      <div class="overlay"></div>
+      <div class="header-content">
+        <pre>
+                // ¡Hola! Soy Cristian, un desarrollador apasionado por crear soluciones tecnológicas que transformen ideas en realidades digitales.
+                // Me especializo en inteligencia artificial y disfruto cada paso de construir experiencias interactivas y funcionales.
+            </pre
+        >
+      </div>
+    </header>
+
+    <!-- Sección Lenguajes de Programación -->
+    <section id="lenguajes">
+      <!-- Contenido Sección Lenguajes de Programación -->
+      <h2>Lenguajes de Programación</h2>
+      <div class="lenguajes-container">
+        <div class="iconos-lenguajes">
+          <i class="fab fa-html5 fa-3x" alt="HTML" data-lenguaje="html"></i>
+          <i class="fab fa-css3-alt fa-3x" alt="CSS" data-lenguaje="css"></i>
+          <i class="fab fa-js fa-3x" alt="JavaScript" data-lenguaje="js"></i>
+        </div>
+        <div class="descripcion-lenguaje">
+          <pre id="texto-lenguaje">
+    // Selecciona un lenguaje para ver su descripción.
+                </pre
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección Habilidades Blandas -->
+    <section id="habilidades">
+      <!-- Contenido Sección Habilidades Blandas -->
+      <h2>Habilidades Personales</h2>
+      <div class="habilidades-container">
+          <div class="tarjeta-habilidad">
+              <i class="fas fa-comments fa-3x"></i>
+              <h3>Comunicación</h3>
+              <p>Habilidad para expresar ideas de manera clara y colaborar eficazmente con el equipo.</p>
+          </div>
+          <div class="tarjeta-habilidad">
+              <i class="fas fa-sync-alt fa-3x"></i>
+              <h3>Adaptabilidad</h3>
+              <p>Capacidad de ajustar el enfoque y adaptarse a nuevos desafíos y tecnologías.</p>
+          </div>
+          <div class="tarjeta-habilidad">
+              <i class="fas fa-users fa-3x"></i>
+              <h3>Trabajo en Equipo</h3>
+              <p>Comprometido en colaborar y contribuir en un entorno de equipo para lograr objetivos comunes.</p>
+          </div>
+      </div>
+    </section>
+
+    <!-- Sección Proyectos -->
+    <section id="proyectos">
+      <!-- Contenido Sección Proyectos -->
+      <h2>Proyectos</h2>
+      <div class="proyectos-container">
+          <div class="tarjeta-proyecto">
+              <img src="media/images/image-project1.avif" alt="Proyecto 1">
+              <div class="overlay-proyecto">
+                  <h3>Sitio Web Jurídico</h3>
+                  <p>Sitio web para una página de Consultas Jurídicas sobre Divorcio en Colombia.</p>
+                  <div class="proyecto-links">
+                      <a href="enlace-demo-proyecto1" target="_blank"><i class="fas fa-external-link-alt"></i> Demo</a>
+                      <a href="enlace-github-proyecto1" target="_blank"><i class="fab fa-github"></i> Código</a>
+                  </div>
+              </div>
+          </div>
+          <div class="tarjeta-proyecto">
+              <img src="media/images/image-project2.avif" alt="Proyecto 2">
+              <div class="overlay-proyecto">
+                  <h3>App de Tareas</h3>
+                  <p>Aplicación de gestión de tareas. Creada con JavaScript y Firebase.</p>
+                  <div class="proyecto-links">
+                      <a href="enlace-demo-proyecto2" target="_blank"><i class="fas fa-external-link-alt"></i> Demo</a>
+                      <a href="enlace-github-proyecto2" target="_blank"><i class="fab fa-github"></i> Código</a>
+                  </div>
+              </div>
+          </div>
+          <div class="tarjeta-proyecto">
+              <img src="media/images/image-project3.webp" alt="Proyecto 3">
+              <div class="overlay-proyecto">
+                  <h3>App de Notas</h3>
+                  <p>Aplicación de gestión de notas. Creada con JavaScript y Firebase.</p>
+                  <div class="proyecto-links">
+                      <a href="enlace-demo-proyecto3" target="_blank"><i class="fas fa-external-link-alt"></i> Demo</a>
+                      <a href="enlace-github-proyecto3" target="_blank"><i class="fab fa-github"></i> Código</a>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </section>
+
+    <!-- Sección Contacto -->
+    <section id="contacto">
+      <!-- Contenido Sección Contacto -->
+      <h2>Contáctame y Charlemos sobre tu Proyecto</h2>
+      <form id="contactForm" action="#" method="post">
+          <div class="form-group">
+              <i class="fas fa-user"></i>
+              <input type="text" name="nombre" placeholder="Nombre" required>
+          </div>
+          <div class="form-group">
+              <i class="fas fa-envelope"></i>
+              <input type="email" name="email" placeholder="Correo Electrónico" required>
+          </div>
+          <div class="form-group">
+              <i class="fas fa-pen"></i>
+              <input type="text" name="asunto" placeholder="Asunto" required>
+          </div>
+          <div class="form-group">
+              <i class="fas fa-comment"></i>
+              <textarea name="mensaje" placeholder="Mensaje" required></textarea>
+          </div>
+          <button type="submit"><i class="fas fa-paper-plane"></i> Enviar</button>
+      </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <!-- Contenido Footer -->
+      <div class="footer-container">
+        <p> 2024 CristianB Dev. Todos los derechos reservados.</p>
+        <div class="footer-links">
+            <a href="#inicio">Inicio</a>
+            <a href="#lenguajes">Lenguajes</a>
+            <a href="#habilidades">Habilidades</a>
+            <a href="#proyectos">Proyectos</a>
+            <a href="#contacto">Contacto</a>
+        </div>
+        <div class="redes-sociales">
+            <a href="https://github.com/tuusuario" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://linkedin.com/in/tuusuario" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://twitter.com/tuusuario" target="_blank"><i class="fab fa-twitter"></i></a>
+        </div>
+    </div>
+    </footer>
+
+    <!-- Scrit de JavaScript -->
+    <script src="js\main.js"></script>
+  </body>
+</html>
