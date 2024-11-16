@@ -16,19 +16,53 @@ function handleScroll() {
 window.addEventListener('scroll', handleScroll);
 
 // Manejo del menú móvil
-menuToggle.addEventListener('click', () => {
+const body = document.body;
+
+function toggleMenu() {
+    menuToggle.classList.toggle('active');
     navLinks.classList.toggle('active');
-    menuToggle.setAttribute('aria-expanded', 
-        menuToggle.getAttribute('aria-expanded') === 'true' ? 'false' : 'true'
-    );
-});
+    body.classList.toggle('menu-open');
+    
+    const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
+    menuToggle.setAttribute('aria-expanded', !isExpanded);
+}
+
+menuToggle.addEventListener('click', toggleMenu);
 
 // Cerrar menú al hacer click en un enlace
 navLinks.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => {
-        navLinks.classList.remove('active');
-        menuToggle.setAttribute('aria-expanded', 'false');
+    link.addEventListener('click', (e) => {
+        if (window.innerWidth <= 768) {
+            e.preventDefault();
+            toggleMenu();
+            setTimeout(() => {
+                const targetId = link.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                const headerOffset = 80;
+                const elementPosition = targetElement.getBoundingClientRect().top;
+                const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: 'smooth'
+                });
+            }, 300);
+        }
     });
+});
+
+// Cerrar menú al hacer scroll
+let lastScroll = 0;
+window.addEventListener('scroll', () => {
+    const currentScroll = window.pageYOffset;
+    
+    if (currentScroll > lastScroll && currentScroll > 100) {
+        // Scrolling down
+        if (navLinks.classList.contains('active')) {
+            toggleMenu();
+        }
+    }
+    lastScroll = currentScroll;
 });
 
 // Scroll suave para los enlaces de navegación
